@@ -1,0 +1,21 @@
+name: mm_minimize
+authors:
+ - Aaron Virshup: Autodesk Research
+ - Marat Valiev: Pacific Northwest National Laboratory
+contributors:
+ - "@avirshup"
+description: Minimize a biomolecule and automatically parameterize any bound small molecules.
+methods: |
+  This workflow requires a protein structure with a bound ligand. By default parameters are assigned
+  to the protein, while GAFF2 parameters with Gasteiger partial charges are assigned to any bound
+  ligands. The structure is then minimized for up to 4000 steps using first MDT's steepest descent
+  module to remove clashes, then OpenMM's conjugate gradient minimizer.
+citations:
+  - molsim.bionano.autodesk.com
+definition_file:
+  - parameterizer.py
+keywords:
+  - qm-mm
+  - refinement
+  - protein
+  - docking
